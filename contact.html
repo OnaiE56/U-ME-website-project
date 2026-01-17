@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>U-ME Strategic Solution | Marketing Agency</title>
     <link rel="icon" href="logo.jpg" type="image/jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -32,77 +32,78 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-sect" id="home">
-        <div class="hero-content">
-            <div class="slides-container">
-                <div class="slide active">
-                   <h1>We Bring Excellence, Collaboration & Speed to Your Business</h1> 
-                </div>
-
-                <div class="slide">
-                   <h1>We are data driven and analytical</h1>
-                </div>
-
-                <div class="slide">
-                   <h1>Trust our field execution team with professional and objective-driven</h1> 
-                </div>
-            </div>
-            
-            <div class="slide-dots">
-                <div class="dot active" data-slide="0"></div>
-                <div class="dot" data-slide="1"></div>
-                <div class="dot" data-slide="2"></div>
-            </div>
-            
-            <p>A results-driven marketing agency specializing in strategic brand development and execution that delivers measurable growth.</p>
-            <div class="hero-buttons">
-                <button class="primary-btn">About Us</button>
-                <button class="secondary-btn">Our Services</button>
-            </div>
-        </div>
-    </section>
+    <div class="starter"></div>
 
     <!-- Services Preview -->
-    <section class="services-preview" id="services">
+    <section class="contact-section">
         <div class="section-title">
-            <h2>Our Marketing Services</h2>
-            <p>We provide comprehensive marketing solutions tailored to your business goals and audience.</p>
-            <button class="cta-button">More About Us</button>
+            <h2>LET'S GROW YOUR BRAND ONLINE</h2>
+            <p>Contact us now!</p>
         </div>
         
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-trademark"></i>
+        <div class="contact-flex">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p></p>
                 </div>
-                <h3>Branding</h3>
-                <p>Comprehensive brand identity development, positioning, and visual storytelling that creates memorable connections with your audience.</p>
-                <button class="cta-button">Learn More</button>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Locate Us</h3>
+                    <p>Lakeside Estates, Adenta Boundary Road, Accra, Ghana</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+233 24 187 1345</p>
+                </div>
             </div>
             
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-calendar-alt"></i>
+            <form action="">
+                <div>
+                    <p>READY TO REACH UNIMAGINARY GROWTH?</p>
+                    <h3>Start a conversation with us</h3>
                 </div>
-                <h3>Event Marketing</h3>
-                <p>End-to-end event planning and promotion that engages audience, builds community, and amplifies your brand presence.</p>
-                <button class="cta-button">Learn More</button>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-chart-pie"></i>
-                </div>
-                <h3>Marketing and Sales Strategy Development</h3>
-                <p>Integrated marketing and sales frameworks that align efforts, optimize funnels, and accelerate revenue growth.</p>
-                <button class="cta-button">Learn More</button>
-            </div>
-        </div>
         
-        <div class="more-service-btn">
-            <button class="cta-button">More Services</button>
-        </div>
+                <div class="name">
+                    <input type="text" name="name" id="name" class="input-lab" placeholder="Name" required>
+                </div>
+            
+                <div class="company-name">
+                    <input type="text" name="company-name" id="company-name" class="input-lab" placeholder="Company Name" required>
+                </div>
+
+                <div class="location">
+                    <input type="text" name="location" id="location" class="input-lab" placeholder="Location" required>
+                </div>
+
+                <div class="email">
+                    <input type="email" name="email" id="email" class="input-lab" placeholder="Email" required>
+                </div>
+
+                <div class="phone">
+                    <input type="text" name="phone" id="phone" class="input-lab" placeholder="Phone" required>
+                </div>
+
+                <div class="subject">
+                    <input type="text" name="subject" id="subject" class="input-lab" placeholder="Subject" required>
+                </div>
+
+                <div class="message">
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
     </section>
 
     <!-- Footer -->
@@ -119,7 +120,7 @@
                 <div class="quick-links">
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
+                    <a href="service.html">Services</a>
                     <a href="case-studies.html">Case Studies</a>
                     <a href="blog.html">Blog</a>
                     <a href="contact.html">Contact</a>
