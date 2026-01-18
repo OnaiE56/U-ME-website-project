@@ -22,53 +22,57 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // ===== SLIDESHOW FUNCTIONALITY =====
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
-let currentSlide = 0;
-let slideInterval;
 
-function showSlide(slideIndex) {
-    // Hide all slides
-    slides.forEach(slide => {
-        slide.classList.remove('active');
-    });
+if (slides.length > 0 && dots.length > 0) {
+    let currentSlide = 0;
+    let slideInterval;
 
-    // Remove active class from all dots
-    dots.forEach(dot => {
-        dot.classList.remove('active');
-    });
+    function showSlide(slideIndex) {
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
 
-    // Show the selected slide
-    slides[slideIndex].classList.add('active');
-    dots[slideIndex].classList.add('active');
+        // Remove active class from all dots
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
 
-    currentSlide = slideIndex;
-}
+        // Show the selected slide
+        slides[slideIndex].classList.add('active');
+        dots[slideIndex].classList.add('active');
 
-function nextSlide() {
-    let nextIndex = currentSlide + 1;
-    if (nextIndex >= slides.length) {
-        nextIndex = 0;
+        currentSlide = slideIndex;
     }
-    showSlide(nextIndex);
-}
 
-function startSlideshow() {
-    slideInterval = setInterval(nextSlide, 4000);
-}
+    function nextSlide() {
+        let nextIndex = currentSlide + 1;
+        if (nextIndex >= slides.length) {
+            nextIndex = 0;
+        }
+        showSlide(nextIndex);
+    }
 
-// Event listeners for dots
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', function() {
-        clearInterval(slideInterval);
-        showSlide(index);
+    function startSlideshow() {
+        slideInterval = setInterval(nextSlide, 4000);
+    }
+
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            clearInterval(slideInterval);
+            showSlide(index);
+            startSlideshow();
+        });
+    });
+
+    // Start slideshow when page loads
+    window.addEventListener('load', function() {
+        showSlide(0);
         startSlideshow();
     });
-});
+}
 
-// Start slideshow when page loads
-window.addEventListener('load', function() {
-    showSlide(0);
-    startSlideshow();
-});
 
 // ===== SMOOTH SCROLLING =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
